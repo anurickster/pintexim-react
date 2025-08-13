@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Advantages from '../components/Advantages.jsx'
 
 const Section = styled.section` padding: 140px 5% 40px; text-align: center; background-size: cover; `
 const Title = styled.h1` font-family: 'Bebas Neue', sans-serif; font-size: 72px; line-height: 86px; color: var(--brand-primary); margin-bottom: 10px; `
