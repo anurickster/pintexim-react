@@ -1,0 +1,6 @@
+[
+  { "id": 101, "name": "Ghee A", "price": 450, "image": "https://via.placeholder.com/150", "rating": 4.7 },
+  { "id": 102, "name": "Ghee B", "price": 550, "image": "https://via.placeholder.com/150", "rating": 4.6 }
+]
+
+

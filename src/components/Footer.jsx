@@ -8,17 +8,18 @@ const Foot = styled.footer`
 `
 const Content = styled.div`
   display: grid; grid-template-columns: 300px 1fr 1fr 350px; gap: 4rem; max-width: 1400px; margin: 0 auto; align-items: start;
-  @media (max-width: 1024px) { grid-template-columns: 1fr 1fr; }
-  @media (max-width: 768px) { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+  @media (max-width: 1200px) { grid-template-columns: 260px 1fr 1fr; }
+  @media (max-width: 1024px) { grid-template-columns: 1fr 1fr; justify-items: center; }
+  @media (max-width: 768px) { grid-template-columns: 1fr; text-align: center; gap: 2rem; justify-items: center; }
 `
 const LogoWrap = styled.div` display: flex; flex-direction: column; align-items: flex-start; @media (max-width: 768px){ align-items: center; } `
 const Logo = styled.img` width: 239px; height: 239px; object-fit: contain; @media (max-width: 1024px){ width: 180px; height: 180px; } @media (max-width:768px){ width: 135px; height: 135px; }`
-const Section = styled.div``
+const Section = styled.div` text-align: left; @media (max-width: 768px){ text-align: center; } `
 const H3 = styled.h3` font-size: 1.2rem; margin-bottom: 1.5rem; font-weight: 600; `
-const List = styled.ul``
+const List = styled.ul` list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; justify-items: start; @media (max-width:768px){ justify-items: center; } `
 const ListItem = styled.li` margin-bottom: 0.5rem; `
 const ListLink = styled(NavLink)` color: var(--text-light); display: flex; align-items: center; &:hover{ color: #fff; } `
-const P = styled.p` color: var(--text-light); margin-bottom: 0.75rem; font-size: 0.9rem; display: flex; align-items: flex-start; `
+const P = styled.p` color: var(--text-light); margin-bottom: 0.75rem; font-size: 0.9rem; display: flex; align-items: flex-start; justify-content: flex-start; @media (max-width:768px){ justify-content: center; } `
 const Newsletter = styled.div` display: flex; flex-direction: column; `
 const NewsletterRow = styled.div` display: flex; margin-bottom: 1.5rem; @media (max-width: 768px){ flex-direction: column; } `
 const Input = styled.input` flex: 1; padding: 0.75rem; border: none; border-radius: 5px 0 0 5px; font-size: 0.9rem; @media (max-width:768px){ border-radius: 5px; margin-bottom: 1rem; } `

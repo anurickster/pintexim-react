@@ -6,3 +6,15 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  # Proxy Google Drive UC endpoint via same-origin path
+  from = "/gdrive/*"
+  to = "https://drive.google.com/:splat"
+  status = 200
+
+[[redirects]]
+  # Netlify Function for Drive JSON
+  from = "/api/drive-json"
+  to = "/.netlify/functions/drive-json"
+  status = 200

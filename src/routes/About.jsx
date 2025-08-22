@@ -31,39 +31,52 @@ const IntroP = styled.p` max-width: 800px; margin: 0 auto 1.5rem; font-size: 1.1
 const ImageSection = styled.div` width: 100%; height: 300px; background-size: cover; background-position: center; background-repeat: no-repeat; `
 
 const Mission = styled.section` padding: 100px 5%; background: #f8f8f8; text-align: center; `
-const MissionGrid = styled.div` display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; max-width: 1200px; margin: 0 auto; `
+const MissionGrid = styled.div`
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; max-width: 1200px; margin: 0 auto;
+  @media (max-width: 1200px){ gap: 3rem; }
+  /* Keep 3-up at 1024px for better balance; fall to 2-up below 980px */
+  @media (max-width: 980px){ grid-template-columns: repeat(2, 1fr); gap: 2.2rem; }
+  @media (max-width: 640px){ grid-template-columns: 1fr; gap: 1.8rem; }
+`
 const MissionCard = styled.div` background: transparent; padding: 0; text-align: center; `
-const MissionIcon = styled.img` width: 250px; height: 250px; object-fit: contain; display: block; margin: 0 auto 2rem; `
+const MissionIcon = styled.img`
+  width: 250px; height: 250px; object-fit: contain; display: block; margin: 0 auto 1.5rem;
+  @media (max-width: 1024px){ width: 220px; height: 220px; }
+  @media (max-width: 640px){ width: 170px; height: 170px; }
+`
 const MissionText = styled.p`
   font-family: 'Lato', sans-serif; font-weight: 400; font-style: normal;
-  font-size: 28px; line-height: 100%; letter-spacing: 0;
+  font-size: 26px; line-height: 120%; letter-spacing: 0;
   color: #666; text-align: center; vertical-align: bottom;
-  max-width: 300px; margin: 0 auto;
+  max-width: 360px; margin: 0 auto;
+  @media (max-width: 1200px){ font-size: 24px; }
+  @media (max-width: 900px){ font-size: 22px; }
+  @media (max-width: 640px){ font-size: 18px; }
 `
 
 const WhyChoose = styled.section` padding: 100px 5%; background-size: cover; background-position: center; background-repeat: no-repeat; `
-const WhyWrap = styled.div` display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto; `
+const WhyWrap = styled.div` display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto; @media (max-width: 900px){ grid-template-columns: 1fr; gap: 2rem; } `
 const WhyImage = styled.img` width: 100%; height: auto; border-radius: 10px; `
 const WhyContent = styled.div``
 const WhyP = styled.p` font-size: 1.1rem; line-height: 1.8; color: #666; margin-bottom: 1.5rem; `
 
 const Certs = styled.section` padding: 100px 5%; background: #f8f8f8; text-align: center; `
 const CertGrid = styled.div`
-  display: grid; grid-template-columns: repeat(3, max-content); gap: 3rem 6rem;
-  justify-content: center; align-items: start; max-width: 1800px; margin: 0 auto 3rem;
-  @media (max-width: 1280px){ grid-template-columns: repeat(2, max-content); gap: 2.5rem 4rem; }
-  @media (max-width: 768px){ grid-template-columns: max-content; gap: 2rem; }
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem 2.5rem;
+  justify-items: center; align-items: start; max-width: 1200px; margin: 0 auto 3rem;
+  @media (max-width: 1024px){ grid-template-columns: repeat(2, 1fr); }
+  /* Center the 3rd item (Udemy) on tablet widths by spanning two columns */
+  @media (max-width: 1024px) and (min-width: 769px){
+    & > div:nth-child(3){ grid-column: 1 / -1; }
+  }
 `
 const CertGridBottom = styled.div`
-  display: grid; grid-template-columns: repeat(2, max-content); gap: 3rem 6rem;
-  justify-content: center; align-items: start; max-width: 1800px; margin: 0 auto;
-  @media (max-width: 1280px){ grid-template-columns: max-content; gap: 2.5rem 4rem; }
-  @media (max-width: 768px){ grid-template-columns: max-content; gap: 2rem; }
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem 2.5rem;
+  justify-items: center; align-items: start; max-width: 1200px; margin: 0 auto;
 `
-const CertItem = styled.div` text-align: center; transition: transform .3s ease; &:hover{ transform: translateY(-5px); } `
+const CertItem = styled.div` width: 100%; text-align: center; transition: transform .3s ease; &:hover{ transform: translateY(-5px); } `
 const CertIcon = styled.img`
-  width: 380px; height: 380px; object-fit: contain;
-  @media (max-width: 768px){ width: 280px; height: 280px; }
+  width: clamp(180px, 26vw, 320px); height: auto; object-fit: contain;
 `
 const CertLabel = styled.div` font-family: 'Open Sans', sans-serif; font-size: 1rem; font-weight: 600; color: #333; margin-top: .5rem; `
 
@@ -73,9 +86,14 @@ const TeamSub = styled.p` color: #666; margin-top: -8px; font-size: 12px; `
 const TeamPanel = styled.div` height: 320px; background: #fff; border-radius: 18px; margin: 20px auto 0; `
 
 const DirectorSection = styled.section` padding: 24px 5% 80px; background: #eeeeee; `
-const DirectorGrid = styled.div` display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem 2.25rem; max-width: 1200px; margin: 0 auto; `
+const DirectorGrid = styled.div`
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem 2.25rem; max-width: 1200px; margin: 0 auto;
+  @media (max-width: 1100px){ grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 820px){ grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 560px){ grid-template-columns: 1fr; }
+`
 const DirectorCard = styled.div` text-align: center; max-width: 320px; margin: 0 auto; transition: transform .3s ease; &:hover{ transform: translateY(-5px); } `
-const DirectorImage = styled.div` background: #e7e7e7; border-radius: 12px; height: 273px; margin-bottom: 14px; display: flex; align-items: center; justify-content: center; overflow: hidden; img{ width: 72%; height: 72%; object-fit: contain; opacity: .9; } `
+const DirectorImage = styled.div` background: #e7e7e7; border-radius: 12px; height: 273px; margin-bottom: 14px; display: flex; align-items: center; justify-content: center; overflow: hidden; img{ width: 72%; height: 72%; object-fit: contain; opacity: .9; } @media (max-width: 560px){ height: 220px; } `
 const DirectorContent = styled.div` padding: 0 .5rem; max-width: 320px; margin: 0 auto; `
 const DirectorName = styled.h4` font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; margin-bottom: .25rem; color: #DA7527; text-transform: uppercase; font-weight: 400; letter-spacing: 1px; `
 const DirectorPosition = styled.div`
