@@ -29,13 +29,14 @@ export default function Products() {
   const CaresWrap = styled.section` padding: 100px 5%; background: #f7e6d2; text-align: center; `
   const CaresHead = styled.h2` font-family: 'Bebas Neue', sans-serif; font-size: 72px; line-height: 86px; color: var(--brand-primary); margin-bottom: 3.5rem; @media(max-width:768px){ font-size: 44px; line-height: 1.1; margin-bottom: 2rem; } `
   const CaresGrid = styled.div`
-    display: grid; grid-template-columns: 1fr auto 1fr; gap: 1.5rem; align-items: center; max-width: 1200px; margin: 0 auto; justify-items: center;
+    display: grid; gap: 1.5rem; align-items: center; max-width: 1200px; margin: 0 auto; justify-items: center;
+    grid-template-columns: 1fr auto 1fr; grid-template-areas: 'list image ing';
     @media(max-width:1024px){ grid-template-columns: 1fr 1fr; grid-template-areas: 'list image' 'ing ing'; }
     @media(max-width:640px){ grid-template-columns: 1fr; grid-template-areas: 'list' 'image' 'ing'; }
   `
   const CookieListWrap = styled.div`
-    text-align: left; justify-self: end; grid-area: list; width: 100%; max-width: 420px;
-    @media(max-width:640px){ text-align: center; justify-self: center; margin: 0 auto; }
+    text-align: left; justify-self: end; grid-area: list; width: 100%;
+    @media(max-width:640px){ text-align: center; justify-self: center; margin: 0 auto; max-width: 420px; }
   `
   const CookieList = styled.ul` list-style: none; padding: 0; margin: 0; `
   const CookieItem = styled.li`
@@ -53,7 +54,8 @@ export default function Products() {
     grid-area: image; width: 440px; height: 440px; object-fit: contain;
     @media(max-width:1200px){ width: clamp(220px, 36vw, 440px); height: auto; }
   `
-  const IngWrap = styled.div` text-align: left; justify-self: start; grid-area: ing; width: 100%; max-width: 420px; @media(max-width:640px){ text-align: center; justify-self: center; } `
+  const CookieImageWrap = styled.div` grid-area: image; display: flex; justify-content: center; align-items: center; `
+  const IngWrap = styled.div` text-align: left; justify-self: start; grid-area: ing; width: 100%; @media(max-width:640px){ text-align: center; justify-self: center; max-width: 420px; } `
   const IngTitle = styled.h3` font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; margin-bottom: 1.2rem; text-underline-offset: .5rem; `
   const IngList = styled.ul` list-style: none; padding: 0; margin-bottom: 1.5rem; `
   const IngItem = styled.li` font-size: 1.05rem; line-height: 1.5; margin-bottom: .6rem; padding-left: 1.2rem; position: relative; &::before{ content:'\2022'; position:absolute; left:0; font-weight:bold; font-size:1.2rem; } @media(max-width:640px){ padding-left: 0; &::before{ display:none; } } `
@@ -136,9 +138,9 @@ export default function Products() {
               <CookieItem>Dry Fruit Jaggery Cookies</CookieItem>
             </CookieList>
           </CookieListWrap>
-          <div>
+          <CookieImageWrap>
             <CookieImage src="/products/img-cookie.png" alt="Cookie" />
-          </div>
+          </CookieImageWrap>
           <IngWrap>
             <IngTitle>INGREDIENTS</IngTitle>
             <IngList>
