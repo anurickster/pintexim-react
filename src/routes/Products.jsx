@@ -49,7 +49,10 @@ export default function Products() {
     &::before{ content:''; position:absolute; right:-.8rem; top:50%; width:6px; height:6px; background:#8B4513; border-radius:50%; transform:translateY(-50%); z-index:1; }
     @media(max-width:640px){ font-size: 20px; }
   `
-  const CookieImage = styled.img` grid-area: image; width: clamp(180px, 42vw, 420px); height: auto; object-fit: contain; `
+  const CookieImage = styled.img`
+    grid-area: image; width: 440px; height: 440px; object-fit: contain;
+    @media(max-width:1200px){ width: clamp(220px, 36vw, 440px); height: auto; }
+  `
   const IngWrap = styled.div` text-align: left; justify-self: start; grid-area: ing; width: 100%; max-width: 420px; @media(max-width:640px){ text-align: center; justify-self: center; } `
   const IngTitle = styled.h3` font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; margin-bottom: 1.2rem; text-underline-offset: .5rem; `
   const IngList = styled.ul` list-style: none; padding: 0; margin-bottom: 1.5rem; `

@@ -18,3 +18,4 @@
   from = "/api/drive-json"
   to = "/.netlify/functions/drive-json"
   status = 200
+  force = true
