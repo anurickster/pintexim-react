@@ -1,6 +1,66 @@
 [
-  { "id": 201, "name": "Honey A", "price": 320, "image": "https://via.placeholder.com/150", "rating": 4.8 },
-  { "id": 202, "name": "Honey B", "price": 380, "image": "https://via.placeholder.com/150", "rating": 4.4 }
+    {
+        "id": 1,
+        "name": "Honey 1",
+        "price": 100,
+        "image": "https://placehold.co/150x150?text=Honey%20Image",
+        "rating": 4.5
+    },
+    {
+        "id": 2,
+        "name": "Honey 2",
+        "price": 200,
+        "image": "https://placehold.co/150x150?text=Honey%20Image",
+        "rating": 4.5
+    },
+    {
+        "id": 3,
+        "name": "Honey 3",
+        "price": 300,
+        "image": "https://placehold.co/150x150?text=Honey%20Image",
+        "rating": 4.5
+    },
+    {
+        "id": 4,
+        "name": "Honey 4",
+        "price": 400,
+        "image": "https://placehold.co/150x150?text=Honey%20Image",
+        "rating": 4.5
+    },
+    
+    {
+        "id": 5,
+        "name": "Honey 5",
+        "price": 500,
+        "image": "https://placehold.co/150x150?text=Honey%20Image",
+        "rating": 4.5
+    },
+    {
+        "id": 6,
+        "name": "Honey 6",
+        "price": 600,
+        "image": "https://placehold.co/150x150?text=Honey%20Image",
+        "rating": 4.5
+    },
+    {
+        "id": 7,
+        "name": "Honey 7",
+        "price": 700,
+        "image": "https://placehold.co/150x150?text=Honey%20Image",
+        "rating": 4.5
+    },
+    {
+        "id": 8,
+        "name": "Honey 8",
+        "price": 800,
+        "image": "https://placehold.co/150x150?text=Honey%20Image",
+        "rating": 4.5
+    },
+    {
+        "id": 9,
+        "name": "Honey 9",
+        "price": 900,
+        "image": "https://placehold.co/150x150?text=Honey%20Image",
+        "rating": 4.5
+    }
 ]
-
-

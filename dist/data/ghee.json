@@ -1,6 +1,67 @@
 [
-  { "id": 101, "name": "Ghee A", "price": 450, "image": "https://via.placeholder.com/150", "rating": 4.7 },
-  { "id": 102, "name": "Ghee B", "price": 550, "image": "https://via.placeholder.com/150", "rating": 4.6 }
+    {
+        "id": 1,
+        "name": "Ghee 1",
+        "price": 100,
+        "image": "https://placehold.co/150x150?text=Ghee%20Image",
+        "rating": 4.5
+    },
+    {
+        "id": 2,
+        "name": "Ghee 2",
+        "price": 200,
+        "image": "https://placehold.co/150x150?text=Ghee%20Image",
+        "rating": 4.5
+    },
+    {
+        "id": 3,
+        "name": "Ghee 3",
+        "price": 300,
+        "image": "https://placehold.co/150x150?text=Ghee%20Image",
+        "rating": 4.5
+    },
+    {
+        "id": 4,
+        "name": "Ghee 4",
+        "price": 400,
+        "image": "https://placehold.co/150x150?text=Ghee%20Image",
+        "rating": 4.5
+    },
+    
+    {
+        "id": 5,
+        "name": "Ghee 5",
+        "price": 500,
+        "image": "https://placehold.co/150x150?text=Ghee%20Image",
+        "rating": 4.5
+    },
+    {
+        "id": 6,
+        "name": "Ghee 6",
+        "price": 600,
+        "image": "https://placehold.co/150x150?text=Ghee%20Image",
+        "rating": 4.5
+    },
+    {
+        "id": 7,
+        "name": "Ghee 7",
+        "price": 700,
+        "image": "https://placehold.co/150x150?text=Ghee%20Image",
+        "rating": 4.5
+    },
+    {
+        "id": 8,
+        "name": "Ghee 8",
+        "price": 800,
+        "image": "https://placehold.co/150x150?text=Ghee%20Image",
+        "rating": 4.5
+    },
+    {
+        "id": 9,
+        "name": "Ghee 9",
+        "price": 900,
+        "image": "https://placehold.co/150x150?text=Ghee%20Image",
+        "rating": 4.5
+    }
 ]
-
 
