@@ -2,17 +2,21 @@
 // To add more categories later, extend this object with: key -> drive UC link
 
 export const productSources = {
-  // Prefer Drive first (proxied via /gdrive), then fall back to local JSON if Drive fails.
+  // Prefer GitHub raw JSON first, then fall back to bundled local JSON
+  // GitHub raw endpoints:
+  // cookies: https://raw.githubusercontent.com/anurickster/pintexim-react/main/public/data/cookies.json
+  // ghee:    https://raw.githubusercontent.com/anurickster/pintexim-react/main/public/data/ghee.json
+  // honey:   https://raw.githubusercontent.com/anurickster/pintexim-react/main/public/data/honey.json
   cookies: [
-    { type: 'drive', id: '1SKYLsLJUirUXFgxbEws0ugazAOQU7zAL' },
+    { type: 'local', path: 'https://raw.githubusercontent.com/anurickster/pintexim-react/main/public/data/cookies.json' },
     { type: 'local', path: '/data/cookies.json' },
   ],
   ghee: [
-    { type: 'drive', id: '10y8R_F1R0UhAzko8Cwy69JHVEqroamwY' },
+    { type: 'local', path: 'https://raw.githubusercontent.com/anurickster/pintexim-react/main/public/data/ghee.json' },
     { type: 'local', path: '/data/ghee.json' },
   ],
   honey: [
-    { type: 'drive', id: '1Bnbvsp5caEYoF6H41VtX1w316T73yOM4' },
+    { type: 'local', path: 'https://raw.githubusercontent.com/anurickster/pintexim-react/main/public/data/honey.json' },
     { type: 'local', path: '/data/honey.json' },
   ],
 };

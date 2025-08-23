@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { productSources } from './sources'
-import { fetchJsonFromDrive } from './drive'
 
 // Fetch a single category by key (e.g., 'cookies', 'ghee', 'honey')
 export const fetchCategory = createAsyncThunk(
@@ -15,9 +14,7 @@ export const fetchCategory = createAsyncThunk(
       let lastError = null
       for (const src of srcList) {
         try {
-          if (src.type === 'drive') {
-            data = await fetchJsonFromDrive(src.id)
-          } else if (src.type === 'local') {
+          if (src.type === 'local') {
             const res = await fetch(src.path)
             if (!res.ok) throw new Error(`HTTP ${res.status}`)
             data = await res.json()
